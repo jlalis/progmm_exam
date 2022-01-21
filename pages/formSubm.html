@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap 5 Website Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <style>
+  .fakeimg {
+    height: 200px;
+    background: #aaa;
+  }
+  </style>
+</head>
+
+<div class="p-5 bg-primary text-white text-center">
+  <h1>LTO Form</h1>
+  <p>Resize this responsive page to see the effect!</p> 
+</div>
+
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+  <div class="container-fluid">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link active" href="#">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="./updateUser.html">Update</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="./pages/contactInfo.html">LTO Form</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="">Logout</a>
+      </li>
+
+    </ul>
+  </div>
+</nav>
+
+<div class="container mt-3">
+  <h2>LTO form</h2>
+  <form>
+      <div class="input-group">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="name_form">NAME</span>
+          </div>
+          <input type="text" class="form-control" placeholder="Family Name">
+          <input type="text" class="form-control" placeholder="First Name">
+          <input type="text" class="form-control" placeholder="Middle Name">
+      </div>
+      <br>
+      <div class="input-group">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="addr_form">PRESENT ADDRESS</span>
+          </div>
+          <input type="text" class="form-control" placeholder="No., Street/Municipality, Province">
+      </div>
+      <br>
+      <div class="input-group">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="tcnum_form">TEL. NO/CP NO.</span>
+          </div>
+          <input type="text" class="form-control" placeholder="Tel. No. / CP No.">
+          <div class="input-group-prepend">
+              <span class="input-group-text" id="tin_form">TIN</span>
+          </div>
+          <input type="text" class="form-control" placeholder="TIN">
+      </div>
+      <br>
+      <div class="input-group">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="nat_form">NATIONALITY</span>
+          </div>
+          <input type="text" class="form-control" placeholder="Nationality">
+          <div class="input-group-prepend">
+              <span class="input-group-text" id="sex_form">SEX</span>
+          </div>
+          <input type="text" class="form-control" placeholder="M/F">
+          <div class="input-group-prepend">
+              <span class="input-group-text" id="bdate_form">BIRTHDATE</span>
+          </div>
+          <input type="text" class="form-control" placeholder="YYYY/MM/DD">
+      </div>
+      <br>
+      <div class="input-group">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="height_form">HEIGHT</span>
+          </div>
+          <input type="text" class="form-control" placeholder="cm">
+          <div class="input-group-prepend">
+              <span class="input-group-text" id="weight_form">WEIGHT</span>
+          </div>
+      </div>
+      <br>
+      <div class="input-group">
+          <div class="input-group-prepend">
+              <span class="input-group-text" id="licnum_form">LICENSE NUMBER</span>
+          </div>
+          <input type="text" class="form-control" placeholder="">
+      </div>
+      <br>
+      <label>CS:  </label>
+      <div class="form-check form-check-inline">
+          
+          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="single_form" value="option1">
+          <label class="form-check-label" for="inlineRadio1">1. Single</label>
+      </div>
+      <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="married_form" value="option2">
+          <label class="form-check-label" for="inlineRadio2">2. Married</label>
+      </div>
+      <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="widowed_form" value="option3">
+          <label class="form-check-label" for="inlineRadio3">3. Widowed</label>
+      </div>
+      <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="separated_form" value="option3">
+          <label class="form-check-label" for="inlineRadio3">4. Separated</label>
+      </div>
+
+ 
+
+      <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.3/firebase-app.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+      
+        // Your web app's Firebase configuration
+        const firebaseConfig = {
+          apiKey: "AIzaSyCMpx-C5NpWTJqWUXjA62E0R7q4G1NV6xk",
+          authDomain: "final-prac-c0843.firebaseapp.com",
+          databaseURL: "https://final-prac-c0843-default-rtdb.asia-southeast1.firebasedatabase.app",
+          projectId: "final-prac-c0843",
+          storageBucket: "final-prac-c0843.appspot.com",
+          messagingSenderId: "511552209359",
+          appId: "1:511552209359:web:4e35913a6f4f06186d52ba"
+        };
+      
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+
+        import { getDatabase, ref, set, get, child, update, remove } from "https://www.gstatic.com/firebasejs/9.6.3/firebase-database.js";
+        const db = getDatabase();
+
+        // var unameBox = document.getElementById("uname");
+        // var pwdBox = document.getElementById("pwd");
+
+  
+          const dbref = ref(db);
+          
+          get(child(dbref,"Users/")).then((snapshot)=>{
+            snapshot.forEach(function(childSnapshot) {
+              // var cnt = 0;
+              var key = childSnapshot.key;
+
+              var tableName = document.getElementById("tableAppli");
+              var rowName = tableName.insertRow(0);
+              var cellName = rowName.insertCell(0);
+
+              // var x = row1.insertRow();
+              cellName.innerHTML = key;
+              // alert(userK);
+              // cnt++;
+
+            });
+            
+            })
+ 
+        
+
+
+      </script>
+
+</body>
+</html>
